@@ -1,3 +1,8 @@
+#!/usr/bin/python3 
+
+import os
+
+
 def espacios (longitud,cadena):
     
     espa = " " *(longitud - len(cadena))
@@ -258,28 +263,30 @@ def alta():
             input ("Error, la matrícula no cumple con las especificaciones requeridas. Presione [ENTER]")
             
         else:
-            
-            archivo = open ("calificaciones.csv","r")
-            
-            existe = False
-            
-            for linea in archivo.readlines():
+
+            if os.path.isfile("calificaciones.csv"):
+                            
+                archivo = open ("calificaciones.csv","r")
                 
-                linea = linea[:-1]
+                existe = False
                 
-                linea_individual = linea.split(",")
-                
-                if matricula == linea_individual[0]:
+                for linea in archivo.readlines():
                     
-                    print()
+                    linea = linea[:-1]
                     
-                    print ("Error, la matrícula ingresada ya se encuentra en el archivo.")
+                    linea_individual = linea.split(",")
                     
-                    x = False
-                    
-                    print()
-                    
-                    input ("Presiona [ENTER] para continuar: ")    
+                    if matricula == linea_individual[0]:
+                        
+                        print()
+                        
+                        print ("Error, la matrícula ingresada ya se encuentra en el archivo.")
+                        
+                        x = False
+                        
+                        print()
+                        
+                        input ("Presiona [ENTER] para continuar: ")    
                     
             if x:
                     
