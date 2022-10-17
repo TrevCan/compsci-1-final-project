@@ -14,30 +14,28 @@ def listado_rango():
     
     val = 1
     
-    rangoMin = input("Ingrese el promedio mínimo: ")
-    
-    while not rangoMin.isnumeric():
-        input("Error. Valor debe ser número entero. [ENTER]")
+
+    while True:
         rangoMin = input("Ingrese el promedio mínimo: ")
+        if rangoMin.isnumeric():
+            rangoMin = int(rangoMin)
+            if rangoMin < 1 or rangoMin > 100:
+                input("Error. Valor debe estar entre 1 y 100. [ENTER]")
+            else:
+                break
+        else:
+            input("Error. Valor debe ser número entero. [ENTER]")
 
-    rangoMin = int(rangoMin)
-
-    while rangoMin < 1 or rangoMin > 100:
-        input("Error. Valor debe estar entre 1 y 100. [ENTER]")
-        rangoMin = int(input("Ingrese el promedio mínimo: "))
-
-
-    rangoMax = input ("Ingrese el promedio máximo: ")
-
-    while not rangoMax.isnumeric():
-        input("Error. Valor debe ser número entero. [ENTER]")
-        rangoMax = input ("Ingrese el promedio máximo: ")
-
-    rangoMax = int(rangoMax)
-
-    while rangoMax < 1 or rangoMax > 100:
-        input("Error. Valor debe estar entre 1 y 100. [ENTER]")
-        rangoMax = int(input ("Ingrese el promedio máximo: "))
+    while True:
+        rangoMax = input("Ingrese el promedio máximo: ")
+        if rangoMax.isnumeric():
+            rangoMax = int(rangoMax)
+            if rangoMax < 1 or rangoMax > 100:
+                input("Error. Valor debe estar entre 1 y 100. [ENTER]")
+            else:
+                break
+        else:
+            input("Error. Valor debe ser número entero. [ENTER]")
 
     
     archivo = open ("calificaciones.csv","r")
