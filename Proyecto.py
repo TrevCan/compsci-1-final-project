@@ -9,13 +9,36 @@ def espacios (longitud,cadena):
     
     return espa
 
+
 def listado_rango():
     
     val = 1
     
-    rangoMin = int (input("Ingrese el promedio mínimo: "))
+    rangoMin = input("Ingrese el promedio mínimo: ")
     
-    rangoMax = int (input ("Ingrese el promedio máximo: "))
+    while not rangoMin.isnumeric():
+        input("Error. Valor debe ser número entero. [ENTER]")
+        rangoMin = input("Ingrese el promedio mínimo: ")
+
+    rangoMin = int(rangoMin)
+
+    while rangoMin < 1 or rangoMin > 100:
+        input("Error. Valor debe estar entre 1 y 100. [ENTER]")
+        rangoMin = int(input("Ingrese el promedio mínimo: "))
+
+
+    rangoMax = input ("Ingrese el promedio máximo: ")
+
+    while not rangoMax.isnumeric():
+        input("Error. Valor debe ser número entero. [ENTER]")
+        rangoMax = input ("Ingrese el promedio máximo: ")
+
+    rangoMax = int(rangoMax)
+
+    while rangoMax < 1 or rangoMax > 100:
+        input("Error. Valor debe estar entre 1 y 100. [ENTER]")
+        rangoMax = int(input ("Ingrese el promedio máximo: "))
+
     
     archivo = open ("calificaciones.csv","r")
     
@@ -44,7 +67,7 @@ def listado_rango():
         
         print()
         
-        print("El rango elegido no existe en el sistema")
+        print("El rango elegido no existe en el sistema [ENTER]")
            
      
     archivo.close()
