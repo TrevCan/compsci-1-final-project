@@ -5,8 +5,8 @@
 # Proyecto Final TC1028 Pensamiento Computacional para la Ingeniería
 # 
 # Autores:
-# Alyson Sánchez
-# Héctor Canizales
+# Alyson Sánchez    A01771843
+# Héctor Canizales  A01369549
 #
 
 import os
@@ -25,25 +25,43 @@ def listado_rango():
     
 
     while True:
+        
         rangoMin = input("Ingrese el promedio mínimo: ")
+        
         if rangoMin.isnumeric():
+            
             rangoMin = int(rangoMin)
+            
             if rangoMin < 1 or rangoMin > 100:
+                
                 input("Error. Valor debe estar entre 1 y 100. [ENTER]")
+                
             else:
+                
                 break
+            
         else:
+            
             input("Error. Valor debe ser número entero. [ENTER]")
 
     while True:
+        
         rangoMax = input("Ingrese el promedio máximo: ")
+        
         if rangoMax.isnumeric():
+            
             rangoMax = int(rangoMax)
+            
             if rangoMax < 1 or rangoMax > 100:
+                
                 input("Error. Valor debe estar entre 1 y 100. [ENTER]")
+                
             else:
+                
                 break
+            
         else:
+            
             input("Error. Valor debe ser número entero. [ENTER]")
 
     
@@ -187,14 +205,6 @@ def listado_paterno():
 
 def listado():
     
-    print ("\n"*20)
-    
-    print ("===============================================================")
-    
-    print ("Usted ha elegido la opción 'Listado de alumnos'.")
-    
-    print ("===============================================================")
-    
     archivo = open("calificaciones.csv","r")
     
     print()
@@ -224,14 +234,6 @@ def listado():
 def consulta_matricula():
     
     val = False
-    
-    print ("\n"*20)
-    
-    print ("===============================================================")
-    
-    print ("Usted ha elegido la opción 'Consulta de alumnos por matrícula'.")
-    
-    print ("===============================================================")
     
     matricula = input ("Ingrese la matrícula del estudiante cuyos datos desea conocer: ")
     
@@ -269,16 +271,6 @@ def consulta_matricula():
 def alta():
     
     x = True
-
-    
-    print ("\n"*20)
-    
-    print ("=============================================")
-    
-    print ("Usted ha elegido la opción 'Alta de alumnos'.")
-    
-    print ("=============================================")
-    
     
     while x == True:
         
@@ -316,82 +308,82 @@ def alta():
                         
                         input ("Presiona [ENTER] para continuar: ")    
                     
-            if x:
+            
                     
-                while x == True:
+            while x == True:
                     
-                    nombre = input ("Indique el nombre del estudiante (máximo 15 caracteres): ")
+                nombre = input ("Indique el nombre del estudiante (máximo 15 caracteres): ")
                         
-                    if len(nombre) < 1 or len(nombre) > 15:
+                if len(nombre) < 1 or len(nombre) > 15:
                             
-                        input ("Error, el nombre no cumple con las especificaciones requeridas. Presione [ENTER]")
+                    input ("Error, el nombre no cumple con las especificaciones requeridas. Presione [ENTER]")
                         
-                    else:
+                else:
                             
-                        while x == True:
+                    while x == True:
                             
-                            apellido_paterno = input ("Indique el Apellido Paterno del estudiante (máximo 15 caracteres): ")
+                        apellido_paterno = input ("Indique el Apellido Paterno del estudiante (máximo 15 caracteres): ")
                                 
-                            if len(apellido_paterno) < 1 or len(apellido_paterno) > 15:
+                        if len(apellido_paterno) < 1 or len(apellido_paterno) > 15:
                                     
-                                input ("Error, el apellido no cumple con las especificaciones requeridas. Presione [ENTER]")
+                            input ("Error, el apellido no cumple con las especificaciones requeridas. Presione [ENTER]")
                                 
-                            else:
+                        else:
                                     
-                                while x == True:
+                            while x == True:
                                     
-                                    apellido_materno = input ("Indique el Apellido Materno del estudiante (máximo 15 caracteres): ")
+                                apellido_materno = input ("Indique el Apellido Materno del estudiante (máximo 15 caracteres): ")
                                         
-                                    if len(apellido_materno) < 1 or len(apellido_materno) > 15:
+                                if len(apellido_materno) < 1 or len(apellido_materno) > 15:
                                             
-                                        input ("Error, el apellido no cumple con las especificaciones requeridas. Presione [ENTER]")
+                                    input ("Error, el apellido no cumple con las especificaciones requeridas. Presione [ENTER]")
                                             
-                                    else:
+                                else:
                                             
-                                        while x == True:
+                                    while x == True:
                                             
-                                            carrera = input ("Indique la carrera universitaria del estudiante (3 caracteres): ")
+                                        carrera = input ("Indique la carrera universitaria del estudiante (3 caracteres): ")
                                                 
-                                            if len(carrera) < 3 or len(carrera) > 3:
+                                        if len(carrera) < 3 or len(carrera) > 3:
                                                     
-                                                input ("Error, la carrera universitaria no cumple con las especificaciones requeridas. Presione [ENTER]")
+                                            input ("Error, la carrera universitaria no cumple con las especificaciones requeridas. Presione [ENTER]")
                                                     
-                                            else:
+                                        else:
                                                     
-                                                while x == True:
+                                            while x == True:
                                                         
-                                                    promedio = input ("Indique el promedio del estudiante (1-100): ")
+                                                promedio = input ("Indique el promedio del estudiante (1-100): ")
                                                         
-                                                    if promedio.isnumeric() == True:
+                                                if promedio.isnumeric() == True:
                                                             
-                                                        promedio = int(promedio)
+                                                    promedio = int(promedio)
                                                             
-                                                        if promedio < 1 or promedio > 100:
+                                                    if promedio < 1 or promedio > 100:
                                                             
-                                                            input ("Error, el promedio no cumple con las especificaciones requeridas. Presione [ENTER]")
+                                                        input ("Error, el promedio no cumple con las especificaciones requeridas. Presione [ENTER]")
                                                             
-                                                        else:
+                                                    else:
                                                                 
-                                                            promedio = str(promedio)
+                                                        promedio = str(promedio)
                                                         
-                                                            datos_alumno = matricula + "," + nombre + "," + apellido_paterno + "," + apellido_materno + "," + carrera + "," + promedio + "\n"
+                                                        datos_alumno = matricula + "," + nombre + "," + apellido_paterno + "," + apellido_materno + "," + carrera + "," + promedio + "\n"
                                                                 
-                                                            archivo = open("calificaciones.csv","a")
+                                                        archivo = open("calificaciones.csv","a")
                     
-                                                            archivo.write(datos_alumno)
+                                                        archivo.write(datos_alumno)
                                                                                 
-                                                            archivo.close()
+                                                        archivo.close()
                                                                 
-                                                            print()
+                                                        print()
                                                                 
-                                                            input ("Los datos se han guardado correctamente en la base de datos. Presione [ENTER] para regresar al menu: ")
+                                                        input ("Los datos se han guardado correctamente en la base de datos. Presione [ENTER] para regresar al menu: ")
                                                                 
-                                                            x = False
+                                                        x = False
                                                        
             
-                                                    else:
+                                                else:
                                                             
-                                                        input ("Error, el promedio debe ser numérico y entero.")
+                                                    input ("Error, el promedio debe ser numérico y entero.")
                                                         
                                                                                                            
                                                                                      
@@ -427,29 +419,79 @@ def menu():
         
         if opcion == "1":
             
+            print ("\n"*20)
+    
+            print ("=============================================")
+    
+            print ("Usted ha elegido la opción 'Alta de alumnos'.")
+    
+            print ("=============================================")
+            
             alta()
         
         elif opcion == "2":
+            
+            print ("\n"*20)
+    
+            print ("===============================================================")
+    
+            print ("Usted ha elegido la opción 'Consulta de alumnos por matrícula'.")
+    
+            print ("===============================================================")
             
             consulta_matricula()
             
         elif opcion == "3":
             
+            print ("\n"*20)
+    
+            print ("======================================================")
+    
+            print ("Usted ha elegido la opción 'Listado de alumnos'.")
+    
+            print ("======================================================")
+            
             listado()
             
         elif opcion == "4":
+            
+            print ("\n"*20)
+    
+            print ("======================================================================")
+    
+            print ("Usted ha elegido la opción 'Listado de alumnos por apellido paterno'.")
+    
+            print ("======================================================================")
             
             listado_paterno()
             
         elif opcion == "5":
             
+            print ("\n"*20)
+    
+            print ("==================================================================")
+    
+            print ("Usted ha elegido la opción 'Listado de alumnos por carrera'.")
+    
+            print ("==================================================================")
+            
             listado_carrera()
             
         elif opcion == "6":
             
+            print ("\n"*20)
+    
+            print ("======================================================================")
+    
+            print ("Usted ha elegido la opción 'Listado de alumnos en rango de promedio'.")
+    
+            print ("=====================================================================")
+            
             listado_rango()
             
         elif opcion == "7":
+            
+            print()
             
             input ("Cerrando, presiona [ENTER] para salir.")
             
@@ -462,4 +504,3 @@ def menu():
         
         
 menu()
-
