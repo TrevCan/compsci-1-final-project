@@ -275,7 +275,7 @@ def alta():
     
     print ("=============================================")
     
-    print ("Usted ha elegido la opción 'Data de alumnos'.")
+    print ("Usted ha elegido la opción 'Alta de alumnos'.")
     
     print ("=============================================")
     
@@ -297,8 +297,6 @@ def alta():
             if os.path.isfile("calificaciones.csv"):
                             
                 archivo = open ("calificaciones.csv","r")
-                
-                existe = False
                 
                 for linea in archivo.readlines():
                     
