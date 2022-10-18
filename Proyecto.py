@@ -1,5 +1,14 @@
 #!/usr/bin/python3 
 
+#
+# ITESM Campus Toluca
+# Proyecto Final TC1028 Pensamiento Computacional para la Ingeniería
+# 
+# Autores:
+# Alyson Sánchez
+# Héctor Canizales
+#
+
 import os
 
 
